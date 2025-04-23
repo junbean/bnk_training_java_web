@@ -32,3 +32,39 @@ bnk 자바 웹서버 학습
 클라이언트(view) --------> 데이터(parmeter) --------> 서버(servlet)
 
 클라이언트(view) <-------- 데이터(request 영역에 저장) <-------- 서버(servlet)
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+
+# http의 특징
+
+-   비연결성
+-   사용자의 기록을 기억하지 않음
+-   그래서 저장소를 필요로 하다
+-   그리고 request도 공유하지 않기에 복사를 해서 상태를 저장한다
+
+<br>
+<br>
+<br>
+
+# 값을 저장하기 위한 저장소
+
+1. page
+2. request
+3. session
+4. application
+
+<br>
+<br>
+<br>
+
+# WAS 서버에 대해
+
+<br>
+<br>
+<br>
