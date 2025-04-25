@@ -1,4 +1,4 @@
-<%@page import="ex04.A"%>
+<%@page import="ex04.VO.A"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -40,7 +40,7 @@
 </head>
 <body>
 <!-- 주석 -->
-<%-- 주석 근데 개발자 코드에서 나타나지 않게 한다 --%>
+<%-- 주석 - 개발자 코드에서 나타나지 않게 한다 --%>
 	GN : <%= gn %><br>
 	LN : <%= ln %><br>
 	<table border="1">

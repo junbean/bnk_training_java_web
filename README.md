@@ -68,3 +68,24 @@ bnk 자바 웹서버 학습
 <br>
 <br>
 <br>
+<hr>
+<br>
+<br>
+<br>
+
+# `JSTL` - Action Tag
+
+1. <jsp:forward>
+
+    - 해당 태그 사이에 내용이 있을경우 <></> 이걸 사용
+    - 아니면 걍 </> 이거 사용
+
+2. <jsp:include>
+    - 파일을 포함해서 나타냄
+    - jsp파일을 사용하면 해당 jsp파일의 내용이 화면에 출력 + 거기서 지정한 저장소의 데이터도 사용가능하다(pageContext 제외)
+3. <jsp:param>
+    - 파라미터를 전달함
+4. <jsp:useBean>
+    - 자바 클래스 객체 사용
+5. <jsp:setProperty>
+6. <jsp:getProperty>
