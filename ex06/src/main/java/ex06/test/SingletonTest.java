@@ -16,11 +16,6 @@ public class SingletonTest {
 		B b_2 = new B();
 		System.out.println(b_1 == b_2);
 			
-		// ================================
-		MemberDAO singleMember1 = SingletonMemberDAO.getInstance();
-		MemberDAO singleMember2 = SingletonMemberDAO.getInstance();
-		System.out.println(singleMember1 == singleMember2);
-		singleMember1.selectAll();
 		
 	}
 

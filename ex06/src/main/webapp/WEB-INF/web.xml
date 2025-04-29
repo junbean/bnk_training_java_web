@@ -9,4 +9,23 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+	 
+	<context-param>
+		<param-name>OracleDriver</param-name>
+		<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>OracleUrl</param-name>
+		<param-value>jdbc:oracle:thin:@localhost:1521:testdb</param-value>
+	</context-param>
+	<context-param>
+		<param-name>OracleId</param-name>
+		<param-value>green</param-value>
+	</context-param>
+	<context-param>
+		<param-name>OraclePw</param-name>
+		<param-value>1234</param-value>
+	</context-param>
+	
 </web-app>

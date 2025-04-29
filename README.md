@@ -89,3 +89,74 @@ bnk 자바 웹서버 학습
     - 자바 클래스 객체 사용
 5. <jsp:setProperty>
 6. <jsp:getProperty>
+
+<br>
+<br>
+<br>
+<hr>
+
+server -> server.xml에 접근
+<GlobalNamingResources></GlobalNamingResources>안에서 작성
+
+<Resource 
+  		auth="Container"
+  		driverClassName="oracle.jdbc.driver.OracleDriver"
+  		type="javax.sql.DataSource"
+  		initialiSize="5"
+  		minIdle="5"
+  		maxTotal="20"
+  		maxIdle="20"
+  		maxWaitMillis="5000" 
+  		url="jdbc:oracle:this:@Localhost:1521:testdb"
+  		name="dbcp_myoracle"
+  		username="green"
+  		passord="1234" />
+
+<!--
+		type : 데이터소스로 사용할 클래스명
+		initialSize : 풀의 최초 초기화 과정에서 미리 만들어 놓을 연결의 개수(기본 : 0)
+		minIdle : 최소한으로 유지할 연결 개수
+		maxTotal : 동시에 사용할 수 있는 최대 연결 개수(기본 : 8)
+		maxIdle : 풀에 반납할 때 최대로 유지될 수 있는 연결 개수(기본 : 8)
+		maxWaitMillis : 새로운 요청이 들어왓을 때 얼마나 대기할지를 밀리초 단위로 기술
+		name : 생성할 자원이름(풀이름)
+-->
+
+server -> context.xml에 접근
+<Context></Context>안에서 작성
+
+<ResourceLink global="dbcp_myoracle" name="dbcp_myoracle" type="javax.sql.DataSource" />
+
+<hr>
+
+연결하는 되는 이름
+server.xml -> GlobalNamingResources 태그 -> Resource 태그의 name
+context.xml -> ResourceLink 태그의 global
+
+<br>
+
+context.xml -> ResourceLink 태그의 name
+DBconnPool -> DataSource ds = (DataSource)ctx.lookup("dbcp_myoracle");
+<-- 여기에 name과 연결
+
+<br>
+<hr>
+<br>
+
+프로젝트 내의 webapp -> web.xml에서 작성
+<context-param>
+<param-name>OracleDriver</param-name>
+<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+</context-param>
+<context-param>
+<param-name>OracleUrl</param-name>
+<param-value>jdbc:oracle:thin:@localhost:1521:testdb</param-value>
+</context-param>
+<context-param>
+<param-name>OracleId</param-name>
+<param-value>green</param-value>
+</context-param>
+<context-param>
+<param-name>OraclePw</param-name>
+<param-value>1234</param-value>
+</context-param>
